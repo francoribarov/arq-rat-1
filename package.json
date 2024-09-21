@@ -1,0 +1,30 @@
+{
+  "name": "rat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.1",
+    "@types/amqplib": "^0.10.5",
+    "@types/express": "^4.17.21",
+    "amqplib": "^0.10.4",
+    "bull": "^4.16.3",
+    "faker": "^6.6.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2",
+    "zod": "^3.23.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}
