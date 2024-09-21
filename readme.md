@@ -34,3 +34,16 @@ QUEUE_TYPE
 ```bash
 npm run dev
 ```
+
+# Probar el proyecto
+
+- Levantar Postman y pegarle con post en el puerto en el cual esté levantado el sv por ejemplo:
+ http://localhost:3000/data
+- Se necesita un body válido, el mismo podría ser:
+ ```bash
+{
+    "word": "palabra",
+    "count": 10,
+    "test": "TEST1"
+}
+```
