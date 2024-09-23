@@ -8,8 +8,7 @@ import {
   addOneToCount,
   updateEnum,
 } from "../filters/filters";
-import { Data, enumTest } from "../types/types";
-import { faker } from "@faker-js/faker";
+import { Data } from "../types/types";
 
 require("dotenv").config();
 
@@ -40,31 +39,5 @@ pipeline.on("errorInFilter", (error, data) => {
 });
 
 export const executePipeline = (input: Data) => {
-  const randomData = generateRandomStuff();
-  randomData.forEach((data) => pipeline.processInput(data));
-  //pipeline.processInput(input);
+  pipeline.processInput(input);
 };
-function generateRandomStuff() {
-  const dataToProcessArray: Data[] = [];
-
-  const randomWords = Array.from({ length: 1000 }, () => {
-    const word = faker.word.noun();
-    return Math.random() < 0.5 ? word.toLowerCase() : word.toUpperCase();
-  });
-
-  const randomNumbers = Array.from({ length: 1000 }, () => faker.number.int());
-
-  const fakeEnum = Array.from({ length: 1000 }, () =>
-    Math.random() < 0.5 ? "TEST1" : "TEST2"
-  );
-  for (let i = 0; i < randomWords.length; i++) {
-    const dataToProcess: Data = {
-      word: randomWords[i],
-      count: randomNumbers[i],
-      test: fakeEnum[i],
-    };
-    dataToProcessArray.push(dataToProcess);
-  }
-
-  return dataToProcessArray;
-}

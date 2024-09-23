@@ -5,8 +5,8 @@
   "scripts": {
     "tsc": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node-dev src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sv": "ts-node-dev src/index.ts",
+    "data-gen": "ts-node-dev src/dataGenerator.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@types/amqplib": "^0.10.5",
     "@types/express": "^4.17.21",
     "amqplib": "^0.10.4",
+    "axios": "^1.7.7",
     "bull": "^4.16.3",
     "faker": "^6.6.6",
     "ts-node-dev": "^2.0.0",
